@@ -20,12 +20,11 @@ public class Calculadora {
 
 		System.out.println("Escribe una de las opciones");
 		opcion = sc.nextInt();
-
+		double numero=0.0;
+		double potencia=0.0;
 		switch (opcion) {
 		case 1: {
-			
-			suma(1,1);
-			
+
 			break;
 		}
 		case 2: {
@@ -38,7 +37,12 @@ public class Calculadora {
 			break;
 		}
 		case 5: {
-			potencia(2, 2);
+			
+			System.out.println("Dime el numero:");
+			numero=sc.nextDouble();
+			System.out.println("Dime a que lo quieres elevar:");
+			potencia=sc.nextDouble();
+			potencia(numero, potencia);
 			break;
 		}
 		case 6: {
@@ -63,19 +67,4 @@ public class Calculadora {
 
 		}
 	}
-	
-	public static void suma(double numero1, double numero2) {
-
-		try {
-			double resultado = 0;
-
-			resultado = numero1+numero2;
-
-			System.out.println("El resultado de " + numero1 + " más " + suma + " es igual: " + resultado);
-		} catch (Exception e) {
-			System.out.println("Error");
-
-		}
-	}
-	
 }
