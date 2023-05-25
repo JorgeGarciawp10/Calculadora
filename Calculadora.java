@@ -23,7 +23,9 @@ public class Calculadora {
 
 		switch (opcion) {
 		case 1: {
-
+			
+			suma(1,1);
+			
 			break;
 		}
 		case 2: {
@@ -61,4 +63,19 @@ public class Calculadora {
 
 		}
 	}
+	
+	public static void suma(double numero1, double numero2) {
+
+		try {
+			double resultado = 0;
+
+			resultado = numero1+numero2;
+
+			System.out.println("El resultado de " + numero1 + " más " + suma + " es igual: " + resultado);
+		} catch (Exception e) {
+			System.out.println("Error");
+
+		}
+	}
+	
 }
