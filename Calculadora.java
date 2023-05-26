@@ -15,6 +15,7 @@ public class Calculadora {
 		double numero1 = 0.0;
 		double numero2 = 0.0;
 		double potencia = 0.0;
+		double division =0.0;
 		double suma = 0.0;
 		double resta=0.0;
 		boolean menu = false;
@@ -55,6 +56,14 @@ public class Calculadora {
 				break;
 			}
 			case 4: {
+				System.out.println("Dime el numero:");
+				numero1 = sc.nextDouble();
+				System.out.println("Dime otro numero para dividir:");
+				numero2 = sc.nextDouble();
+				dividir = dividir(numero1, numero2);
+				System.out.println("El resultado es: " + suma);
+				System.out.println();
+				
 				break;
 			}
 			case 5: {
@@ -102,6 +111,21 @@ public class Calculadora {
 		try {
 
 			resultado = numero1 - numero2;
+
+		} catch (Exception e) {
+			System.out.println("Error");
+
+		} finally {
+			return resultado;
+		}
+
+	}
+	
+	public static double dividir(double numero1, double numero2) {
+		double resultado = 0;
+		try {
+
+			resultado = numero1/numero2;
 
 		} catch (Exception e) {
 			System.out.println("Error");
