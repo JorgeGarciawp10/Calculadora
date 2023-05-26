@@ -39,6 +39,14 @@ public class Calculadora {
 				break;
 			}
 			case 2: {
+				double resta=0;
+		                double numero1=0;
+				double numero2=0;
+				System.out.println("Dime los númeroslos cuáles quieras restar:");
+				numero1= sc.nextDouble() ;
+				numero2=sc.nextDouble();
+				resta=(numero1 - numero2);
+	   			System.out.println(resta);
 				break;
 			}
 			case 3: {
