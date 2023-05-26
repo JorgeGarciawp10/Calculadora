@@ -2,6 +2,7 @@ package calculadora;
 
 import java.util.Scanner;
 
+
 public class Calculadora {
 
 	public static void main(String[] args) {
@@ -15,10 +16,10 @@ public class Calculadora {
 		double numero1 = 0.0;
 		double numero2 = 0.0;
 		double potencia = 0.0;
-		double dividir =0.0;
+		double division =0.0;
 		double suma = 0.0;
 		double resta=0.0;
-		double multiplicar = 0.0;
+		double raizcuadrada=0.0;
 		boolean menu = false;
 
 		while (menu == false) {
@@ -28,7 +29,8 @@ public class Calculadora {
 			System.out.println("3. Multiplicar ");
 			System.out.println("4. Dividir");
 			System.out.println("5 Potencia");
-			System.out.println("6 Salir");
+			System.out.println("6 Raiz Cuadrada");
+			System.out.println("7 Salir");
 
 			System.out.println("Escribe una de las opciones");
 			opcion = sc.nextInt();
@@ -54,13 +56,6 @@ public class Calculadora {
 				break;
 			}
 			case 3: {
-				System.out.println("Dime un numero para multiplicar:");
-				numero1 = sc.nextDouble();
-				System.out.println("Dime otro numero para Multiplicar:");
-				numero2 = sc.nextDouble();
-				multiplicar = multiplicar(numero1, numero2);
-				System.out.println("El resultado es: " + multiplicar);
-				System.out.println();
 				break;
 			}
 			case 4: {
@@ -68,7 +63,7 @@ public class Calculadora {
 				numero1 = sc.nextDouble();
 				System.out.println("Dime otro numero para dividir:");
 				numero2 = sc.nextDouble();
-				dividir = dividir(numero1, numero2);
+				division = dividir(numero1, numero2);
 				System.out.println("El resultado es: " + suma);
 				System.out.println();
 				
@@ -89,6 +84,19 @@ public class Calculadora {
 				break;
 			}
 			case 6: {
+				double resulRaizCuadrada = 0;
+
+				System.out.println("Dime el numero:");
+				numero = sc.nextDouble();
+				raizcuadrada =numero;
+				resulRaizCuadrada = raizcuadrada(numero);
+
+				System.out.println("El resultado es " + resulRaizCuadrada);
+				System.out.println();
+
+				break;
+			}
+			case 7: {
 				System.out.println("Adios");
 				menu = true;
 				break;
@@ -129,21 +137,6 @@ public class Calculadora {
 
 	}
 	
-	public static double multiplicar(double numero1, double numero2) {
-		double resultado = 0;
-		try {
-
-			resultado = numero1 * numero2;
-
-		} catch (Exception e) {
-			System.out.println("Error");
-
-		} finally {
-			return resultado;
-		}
-
-	}
-	
 	public static double dividir(double numero1, double numero2) {
 		double resultado = 0;
 		try {
@@ -158,6 +151,23 @@ public class Calculadora {
 		}
 
 	}
+	
+	public static double raizcuadrada(double numero1) {
+		double resultado = 0;
+		try {
+
+			resultado = Math.sqrt(numero1) ;
+
+		} catch (Exception e) {
+			System.out.println("Error");
+
+		} finally {
+			return resultado;
+		}
+
+	}
+
+	
 
 	public static double suma(double numero1, double numero2) {
 
