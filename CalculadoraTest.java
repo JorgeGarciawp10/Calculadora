@@ -21,8 +21,14 @@ class CalculadoraTest {
 		double resultado = calculadoraTest.suma(num2, num);
 		assertEquals(resultadoEsperado, resultado);
 	}
-	
-	
+	@Test 
+	public void testResta() {
+		double num=2.0;
+		double num2=1.0;
+		double resultadoEsperado=1.0;
+		double resultado = calculadoraTest.resta(num2, num);
+		assertEquals(resultadoEsperado, resultado);
+	}
 	
 	
 	@BeforeEach
